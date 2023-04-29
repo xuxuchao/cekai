@@ -1,0 +1,32 @@
+
+\python:S5754‚"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8É˜•™ü0
+>python:S125§"Remove this commented out code.(÷²´¼8°»åÁü0
+[python:S5754U"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8É˜•™ü0
+\python:S5754ü"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8ÌÊãÁü0
+\python:S5754¥"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8œ¦µ™ü0
+\python:S5754¹"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8ìĞÅ³ü0
+Kpython:S5806¢"+Rename this variable; it shadows a builtin.(»°°Û8œ¦µ™ü0
+[python:S5754"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8É˜•™ü0
+>python:S125Ç"Remove this commented out code.(„äŞ’8ÔşäÁü0
+[python:S5754y"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8É˜•™ü0
+[python:S5754."<Specify an exception class to catch or reraise the exception(ˆÊÉ·8É˜•™ü0
+\python:S5754Ï"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8ÌÊãÁü0
+\python:S5754‘"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8ÌÊãÁü0
+Cpython:S125±"Remove this commented out code.(ÍşÔºûÿÿÿÿ8ŠëåÁü0
+spython:S3776j"TRefactor this function to reduce its Cognitive Complexity from 33 to the 15 allowed.(»…ª®8ìĞÅ³ü0
+[python:S5754$"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8É˜•™ü0
+Hpython:S108²")Either remove or fill this block of code.(ã‘Û¾8Êâó·ü0
+ypython:S3776Ñ"TRefactor this function to reduce its Cognitive Complexity from 35 to the 15 allowed.(¨ˆ½ùÿÿÿÿ8ÌÊãÁü0
+xpython:S117ã"YRename this local variable "pageData" to match the regular expression ^[_a-z][a-z0-9_]*$.(¤áÃß8ÌÊãÁü0
+\python:S5754‚"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8ÌÊãÁü0
+\python:S5754ƒ"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8ÌÊãÁü0
+[python:S5754r"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8É˜•™ü0
+zpython:S117Ô"VRename this local variable "vDict" to match the regular expression ^[_a-z][a-z0-9_]*$.(ôõÛáøÿÿÿÿ8ÌÊãÁü0
+Tpython:S1066à"/Merge this if statement with the enclosing one.(æîğÕúÿÿÿÿ8ÌÊãÁü0
+xpython:S117”"YRename this local variable "pageData" to match the regular expression ^[_a-z][a-z0-9_]*$.(ò‚›è8É˜•™ü0
+\python:S5754Â"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8Œ¯Ÿ´ü0
+Rpython:S1481œ"2Remove the unused local variable "belong_project".(º§Áğ8°»åÁü0
+Kpython:S1481Ä"+Remove the unused local variable "oldname".(¬åóí8ÔşäÁü0
+=python:S125="Remove this commented out code.(—Ú¡“8É˜•™ü0
+wpython:S1192"SDefine a constant instead of duplicating this literal "è¯·æ±‚æ•°æ®éæ³•" 3 times.(–‘ìŒùÿÿÿÿ8«ÇêÀü0
+\python:S5754ñ"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8ÌÊãÁü0
