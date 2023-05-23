@@ -3,12 +3,21 @@ import time
 import random
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from test_runner.models import Project
 
 # Create your models here.
 
 class User(AbstractUser):
     # 账号、姓名、密码、手机号、邮箱、是否是管理员账号、是否是激活账号、创建时间、最后一次修改时间。。。
     name = models.CharField("用户真实姓名", max_length=20, null=False, default="管理员")
+    belong_project = models.ManyToManyField(
+        Project,
+        blank=True,
+        help_text="所属项目",
+        verbose_name="所属项目",
+        related_name="user_set",
+        related_query_name="user"
+    )
 
     class Meta:
         verbose_name = "用户信息表"

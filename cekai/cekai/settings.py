@@ -80,9 +80,9 @@ DATABASES = {
     'default':{
         'ENGINE':'django.db.backends.mysql',
         'NAME':'duhuo',
-        'HOST':'127.0.0.1',
+        'HOST':'localhost',
         'USER':'root',
-        'PASSWORD':'',
+        'PASSWORD':'123456',
         'PORT':3306,
     }
 }
@@ -134,11 +134,13 @@ SESSION_ENGINE = "redis_sessions.session"
 SESSION_REDIS_HOST = "127.0.0.1"
 SESSION_REDIS_POST = 6379
 SESSION_REDIS_DB = 5
-SESSION_REDIS_PASSWORD = "123456"
+SESSION_REDIS_PASSWORD = ""
 SESSION_REDIS_PREFIX = "session"
 
 
-#认证
+# 认证
 AUTH_USER_MODEL = 'test_user.User'
 INVALID_TIME = 60 * 60 * 24
 LOGIN_URL = '/testrunner/login/'
+
+# ./redis-server.exe   redis.windows.conf   --maxheap 200m
