@@ -20,3 +20,12 @@ class Project(BaseModel):
         db_table='project'
     def __str__(self):# 导出api时在Excel中显示项目名称
         return self.name
+
+
+class Debugtalk(models.Model):
+    code = models.TextField("python代码", default="# write you code", null=False)
+    project = models.OneToOneField(to=Project, on_delete=models.CASCADE)
+    class Meta:
+        verbose_name = "驱动文件表"
+        verbose_name_plural = verbose_name
+        db_table = 'debugtalk'

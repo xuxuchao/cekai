@@ -9,6 +9,8 @@ import json
 from django.contrib.auth import login, logout
 from django.contrib.auth.hashers import make_password,check_password
 from django.http import JsonResponse
+
+from test_runner.models import Project
 from test_user import models
 
 def register(request):
@@ -294,7 +296,7 @@ def userinfo_view(request):
         # 合成修改数据
         if is_active != None and is_superuser != None:
             # 获取项目信息
-            # projects = Project.objects.filter(id__in=belong_project)
+            projects = Project.objects.filter(id__in=belong_project)
             groups = Group.objects.filter(id__in=groupid_list)
 
             permissions_list = []
@@ -304,8 +306,8 @@ def userinfo_view(request):
             permissionsobj = Permission.objects.filter(id__in=permissions_list)
 
             # 重置用户关联的项目
-            # if projects:
-            #     user.belong_project.set(projects)
+            if projects:
+                user.belong_project.set(projects)
             # 重置权限
             if groups:
                 user.groups.set(groups)
@@ -326,11 +328,11 @@ def userinfo_view(request):
             models.User.objects.filter(username=username).update(**data)
 
             # 用户名发生变化需要修改对应创建的项目中的responsible
-            # if oldname != name:
-            #     pros = Project.objects.filter(responsible=oldname)
-            #     for p in pros:
-            #         p.responsible = name
-            #         p.save()
+            if oldname != name:
+                pros = Project.objects.filter(responsible=oldname)
+                for p in pros:
+                    p.responsible = name
+                    p.save()
 
             return JsonResponse({"code": "0001", "success": True, "msg": "用户信息修改成功"})
         except:
