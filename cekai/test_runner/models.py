@@ -29,3 +29,34 @@ class Debugtalk(models.Model):
         verbose_name = "驱动文件表"
         verbose_name_plural = verbose_name
         db_table = 'debugtalk'
+
+class DataBaseConfig(BaseModel):
+    database_type = (
+        (1,"pg"),
+        (2,"oracle"),
+        (3,"mysql")
+    )
+    name = models.CharField("数据库名称", null=False, max_length=100)
+    type = models.IntegerField("数据库类型", null=False, choices=database_type)
+    server = models.CharField("数据库地址", null=False, max_length=100)
+    account = models.CharField("数据库账号", null=False, max_length=50)
+    password = models.CharField("数据库密码", null=False, max_length=100)
+    desc = models.TextField("描述", null=False)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = "数据库配置表"
+        verbose_name_plural = verbose_name
+        db_table = "database"
+
+class Variable(BaseModel):
+    key = models.CharField("变量名称", null=False, max_length=100)
+    value = models.CharField("变量值", null=False, max_length=1024)
+    desc = models.CharField("简要介绍", max_length=500, null=True)
+    create_user = models.CharField("创建人", null=True, max_length=20)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+    class Meta:
+       verbose_name = "全局变量表"
+       verbose_name_plural = verbose_name
+       db_table = "variable"

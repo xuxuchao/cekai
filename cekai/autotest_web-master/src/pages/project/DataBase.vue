@@ -3,7 +3,7 @@
         <el-header style="background: #F7F7F7; padding: 0; height: 50px">
             <div class="apiData">
                 <div style="padding-top: 10px; margin-left: 10px">
-                    <el-button 
+                    <el-button
                         v-if="permissions.includes('add')"
                         type="primary"
                         size="small"
@@ -103,8 +103,9 @@
                         align="center"
                     >
                         <template slot-scope="scope">
-                            <el-tag v-if="scope.row.type===1" type="">PA</el-tag>
-                            <el-tag v-if="scope.row.type===2" type="success">MySQL</el-tag>                       
+                            <el-tag v-if="scope.row.type===1" type="success">PG</el-tag>
+                            <el-tag v-if="scope.row.type===2" type="success">ORACLE</el-tag>
+                            <el-tag v-if="scope.row.type===3" type="success">MYSQL</el-tag>
                             <span
                                 style="margin-left: 10px; font-size: 18px; font-weight: bold">{{ scope.row.name }}</span>
                         </template>
@@ -236,9 +237,9 @@
                     project:this.$route.params.id
                 },
                 tags: [
-                    {name: 'PA', value: 1},
-                    {name: 'MySQL', value: 2},
-              
+                    {name: 'PG', value: 1},
+                    {name: 'ORACLE', value: 2},
+                    {name: 'MYSQL', value: 3},
                 ],
                 rules: {
                     name: [
@@ -288,7 +289,7 @@
 						} else {
 							this.$message.error(resp.msg)
 						}
-                        
+
                         this.getDataBaseList();
                     }).catch(resp => {
                         this.failure(resp)
@@ -300,7 +301,7 @@
                             this.editVisible = false;
                         }else {
                             this.dialogVisible = false;
-                        }      
+                        }
                 this.dataBaseForm.name = '';
                 this.dataBaseForm.desc = '';
                 this.dataBaseForm.id = '';
@@ -313,7 +314,7 @@
             getpermissions() {
                 getpermissions({app_label:"test_runner",model:"databaseconfig"}).then(resp => {
                     this.permissions = resp["permissions"];
-                   
+
                 })
             },
             handleConfirm(formName) {
@@ -339,7 +340,7 @@
 									this.$message.success(resp.msg)
 								}
 							}
-							
+
 
                             this.dataBaseForm.name = '';
                             this.dataBaseForm.desc = '';
@@ -391,7 +392,7 @@
             this.getDataBaseList();
             this.getpermissions();
         },
-        
+
     }
 </script>
 
