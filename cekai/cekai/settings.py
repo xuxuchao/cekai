@@ -144,3 +144,8 @@ INVALID_TIME = 60 * 60 * 24
 LOGIN_URL = '/testrunner/login/'
 
 # ./redis-server.exe   redis.windows.conf   --maxheap 200m
+
+# 服务IP，开发过程中先使用127.0.0.1代表本机IP
+SERVICE_IP = '127.0.0.1'
+# 服务端口
+SERVICE_PORT = 8000
